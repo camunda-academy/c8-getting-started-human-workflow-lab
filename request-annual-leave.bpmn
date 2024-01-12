@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="9fad09f" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.4.0" camunda:diagramRelationId="4a1fcfed-c121-402d-9c7a-b68a4e92a919">
+  <bpmn:collaboration id="Collaboration_0sag4y0" name="Request Annual Leave">
+    <bpmn:participant id="Participant_RequestAnnualLeave" name="Request Annual Leave" processRef="Process_RequestAnnualLeave" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_RequestAnnualLeave" name="Request Annual Leave" isExecutable="true">
+    <bpmn:extensionElements>
+      <zeebe:userTaskForm id="userTaskForm_2j2flpl">{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.4.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "4a485f2"
+  },
+  "schemaVersion": 12,
+  "components": [
+    {
+      "text": "# Annual Leave Request\n\nPlease try to submit our application **at least one month** before the desired Start Date.",
+      "type": "text",
+      "layout": {
+        "row": "Row_1vra413",
+        "columns": null
+      },
+      "id": "Field_09qo87f"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Start Date",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1qtkw4t",
+        "columns": null
+      },
+      "id": "Field_0nysndz",
+      "key": "startDate",
+      "validate": {
+        "required": true
+      },
+      "properties": { }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "End Date",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0jzdsxz",
+        "columns": null
+      },
+      "id": "Field_1ta47bz",
+      "key": "endDate",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Vacation",
+          "value": "vacation"
+        },
+        {
+          "label": "Training",
+          "value": "training"
+        },
+        {
+          "label": "Other",
+          "value": "other"
+        }
+      ],
+      "label": "Select your reason",
+      "type": "select",
+      "layout": {
+        "row": "Row_0qv2e8i",
+        "columns": null
+      },
+      "id": "Field_1bc221h",
+      "key": "reason"
+    },
+    {
+      "label": "Comment",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1071gwm",
+        "columns": null
+      },
+      "id": "Field_1udx66y",
+      "key": "comment",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_RequestAnnualLeave"
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="UserTaskForm_2lrdktn">{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.4.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "4a485f2"
+  },
+  "schemaVersion": 12,
+  "components": [
+    {
+      "text": "# Annual Leave Request\n\nPlease try to submit our application **at least one month** before the desired Start Date.",
+      "type": "text",
+      "layout": {
+        "row": "Row_1vra413",
+        "columns": null
+      },
+      "id": "Field_09qo87f"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Start Date",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1qtkw4t",
+        "columns": null
+      },
+      "id": "Field_0nysndz",
+      "key": "startDate",
+      "validate": {
+        "required": true
+      },
+      "properties": { }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "End Date",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0jzdsxz",
+        "columns": null
+      },
+      "id": "Field_1ta47bz",
+      "key": "endDate",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Vacation",
+          "value": "vacation"
+        },
+        {
+          "label": "Training",
+          "value": "training"
+        },
+        {
+          "label": "Other",
+          "value": "other"
+        }
+      ],
+      "label": "Select your reason",
+      "type": "select",
+      "layout": {
+        "row": "Row_0qv2e8i",
+        "columns": null
+      },
+      "id": "Field_1bc221h",
+      "key": "reason"
+    },
+    {
+      "label": "Comment",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1071gwm",
+        "columns": null
+      },
+      "id": "Field_1udx66y",
+      "key": "comment",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_RequestAnnualLeave"
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="UserTaskForm_1mln1a3">{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.4.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "66740e0"
+  },
+  "schemaVersion": 14,
+  "id": "Form_ReviewRequest",
+  "components": [
+    {
+      "text": "# Review Request\n\nPlease review the following Annual Leave request.",
+      "type": "text",
+      "id": "Field_1lmcxz9"
+    },
+    {
+      "label": "Start Date",
+      "type": "textfield",
+      "id": "Field_1m8q3kl",
+      "key": "startDate",
+      "disabled": true
+    },
+    {
+      "label": "End Date",
+      "type": "textfield",
+      "id": "Field_1tsktyc",
+      "key": "endDate",
+      "disabled": true
+    },
+    {
+      "label": "Comment",
+      "type": "textfield",
+      "id": "Field_0bbbbzv",
+      "key": "comment",
+      "disabled": true
+    },
+    {
+      "values": [
+        {
+          "label": "Approved",
+          "value": "approved"
+        },
+        {
+          "label": "Rejected",
+          "value": "rejected"
+        },
+        {
+          "label": "Additional Information",
+          "value": "additional"
+        }
+      ],
+      "label": "Decision",
+      "type": "radio",
+      "id": "Field_0w7y5k8",
+      "key": "decision",
+      "defaultValue": "approved",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default"
+}
+</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="UserTaskForm_2ro15ok">{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.4.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "4a485f2"
+  },
+  "schemaVersion": 12,
+  "components": [
+    {
+      "text": "# Annual Leave Request\n\nPlease try to submit our application **at least one month** before the desired Start Date.",
+      "type": "text",
+      "layout": {
+        "row": "Row_1vra413",
+        "columns": null
+      },
+      "id": "Field_09qo87f"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Start Date",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1qtkw4t",
+        "columns": null
+      },
+      "id": "Field_0nysndz",
+      "key": "startDate",
+      "validate": {
+        "required": true
+      },
+      "properties": { }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "End Date",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0jzdsxz",
+        "columns": null
+      },
+      "id": "Field_1ta47bz",
+      "key": "endDate",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "Vacation",
+          "value": "vacation"
+        },
+        {
+          "label": "Training",
+          "value": "training"
+        },
+        {
+          "label": "Other",
+          "value": "other"
+        }
+      ],
+      "label": "Select your reason",
+      "type": "select",
+      "layout": {
+        "row": "Row_0qv2e8i",
+        "columns": null
+      },
+      "id": "Field_1bc221h",
+      "key": "reason"
+    },
+    {
+      "label": "Comment",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1071gwm",
+        "columns": null
+      },
+      "id": "Field_1udx66y",
+      "key": "comment",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_RequestAnnualLeave"
+}</zeebe:userTaskForm>
+    </bpmn:extensionElements>
+    <bpmn:laneSet id="LaneSet_1mlrmjw">
+      <bpmn:lane id="Lane_01m795q" name="Line Manager">
+        <bpmn:flowNodeRef>Task_ReviewRequest</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0gowtzd</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_ReviewRequest</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_MergeDecision</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_NotifyEmployee</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_AnnualLeaveProcessed</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_LogRequest</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_0llrp2q" name="Employee">
+        <bpmn:flowNodeRef>Task_ProvideAdditionalInformation</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>StartEvent_AnnualLeaveRequested</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_0afd4iz" name="Department Manager">
+        <bpmn:flowNodeRef>Activity_1mdk4lk</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:userTask id="Task_ReviewRequest" name="Review Request">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:UserTaskForm_1mln1a3" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_AdditionalInformation-ReviewRequest</bpmn:incoming>
+      <bpmn:incoming>Flow_Start-RequestAnnualLeave</bpmn:incoming>
+      <bpmn:outgoing>Flow_ReviewRequest-Decision</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Task_ProvideAdditionalInformation" name="Provide Additional Information">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_2j2flpl" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_Decision-InformationRequired</bpmn:incoming>
+      <bpmn:outgoing>Flow_AdditionalInformation-ReviewRequest</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_AdditionalInformation-ReviewRequest" sourceRef="Task_ProvideAdditionalInformation" targetRef="Task_ReviewRequest" />
+    <bpmn:sequenceFlow id="Flow_Decision-InformationRequired" name="Information Required" sourceRef="Gateway_ReviewRequest" targetRef="Task_ProvideAdditionalInformation">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=decision = "additional"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_Rejected" name="Rejected" sourceRef="Gateway_ReviewRequest" targetRef="Gateway_MergeDecision">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=decision = "rejected"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_ReviewRequest-Decision" sourceRef="Task_ReviewRequest" targetRef="Gateway_0gowtzd" />
+    <bpmn:sequenceFlow id="Flow_Start-RequestAnnualLeave" sourceRef="StartEvent_AnnualLeaveRequested" targetRef="Task_ReviewRequest" />
+    <bpmn:sequenceFlow id="Flow_NotifyEmployee-EndEvent" sourceRef="Task_NotifyEmployee" targetRef="EndEvent_AnnualLeaveProcessed" />
+    <bpmn:sequenceFlow id="Flow_LogRequest-Merge" sourceRef="Task_LogRequest" targetRef="Gateway_MergeDecision" />
+    <bpmn:sequenceFlow id="Flow_Approved" name="Approved" sourceRef="Gateway_ReviewRequest" targetRef="Task_LogRequest">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=decision = "approved"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_Merge-NotifyEmployee" sourceRef="Gateway_MergeDecision" targetRef="Task_NotifyEmployee" />
+    <bpmn:exclusiveGateway id="Gateway_0gowtzd" name="It&#39;s April?" default="Flow_1iaio24">
+      <bpmn:incoming>Flow_ReviewRequest-Decision</bpmn:incoming>
+      <bpmn:outgoing>Flow_1iaio24</bpmn:outgoing>
+      <bpmn:outgoing>Flow_13bo45a</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1iaio24" name="no" sourceRef="Gateway_0gowtzd" targetRef="Gateway_ReviewRequest" />
+    <bpmn:sequenceFlow id="Flow_13bo45a" name="yes" sourceRef="Gateway_0gowtzd" targetRef="Activity_1mdk4lk">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=date(now()).month = 4</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0vuonha" sourceRef="Activity_1mdk4lk" targetRef="Gateway_ReviewRequest" />
+    <bpmn:exclusiveGateway id="Gateway_ReviewRequest" name="Decision?">
+      <bpmn:incoming>Flow_1iaio24</bpmn:incoming>
+      <bpmn:incoming>Flow_0vuonha</bpmn:incoming>
+      <bpmn:outgoing>Flow_Rejected</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Decision-InformationRequired</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Approved</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="Gateway_MergeDecision">
+      <bpmn:incoming>Flow_Rejected</bpmn:incoming>
+      <bpmn:incoming>Flow_LogRequest-Merge</bpmn:incoming>
+      <bpmn:outgoing>Flow_Merge-NotifyEmployee</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:manualTask id="Task_NotifyEmployee" name="Notify Employee">
+      <bpmn:incoming>Flow_Merge-NotifyEmployee</bpmn:incoming>
+      <bpmn:outgoing>Flow_NotifyEmployee-EndEvent</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:endEvent id="EndEvent_AnnualLeaveProcessed" name="Annual Leave Processed">
+      <bpmn:incoming>Flow_NotifyEmployee-EndEvent</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:manualTask id="Task_LogRequest" name="Log Request">
+      <bpmn:incoming>Flow_Approved</bpmn:incoming>
+      <bpmn:outgoing>Flow_LogRequest-Merge</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:userTask id="Activity_1mdk4lk" name="Review Request">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formId="Form_ReviewRequest" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_13bo45a</bpmn:incoming>
+      <bpmn:outgoing>Flow_0vuonha</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:startEvent id="StartEvent_AnnualLeaveRequested" name="Annual Leave Request">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:UserTaskForm_2ro15ok" />
+      </bpmn:extensionElements>
+      <bpmn:outgoing>Flow_Start-RequestAnnualLeave</bpmn:outgoing>
+    </bpmn:startEvent>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0sag4y0">
+      <bpmndi:BPMNShape id="Participant_17n3rui_di" bpmnElement="Participant_RequestAnnualLeave" isHorizontal="true">
+        <dc:Bounds x="175" y="80" width="1415" height="590" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0afd4iz_di" bpmnElement="Lane_0afd4iz" isHorizontal="true">
+        <dc:Bounds x="205" y="550" width="1385" height="120" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0llrp2q_di" bpmnElement="Lane_0llrp2q" isHorizontal="true">
+        <dc:Bounds x="205" y="80" width="1385" height="180" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_01m795q_di" bpmnElement="Lane_01m795q" isHorizontal="true">
+        <dc:Bounds x="205" y="260" width="1385" height="290" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_06p4xqx_di" bpmnElement="Task_ReviewRequest">
+        <dc:Bounds x="585" y="300" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_004nea5_di" bpmnElement="Task_ProvideAdditionalInformation">
+        <dc:Bounds x="585" y="120" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0gowtzd_di" bpmnElement="Gateway_0gowtzd" isMarkerVisible="true">
+        <dc:Bounds x="745" y="315" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="747" y="291" width="45" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_024vlg2_di" bpmnElement="Gateway_ReviewRequest" isMarkerVisible="true">
+        <dc:Bounds x="970" y="315" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="935" y="303" width="49" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0omrt72_di" bpmnElement="Gateway_MergeDecision" isMarkerVisible="true">
+        <dc:Bounds x="1225" y="315" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1wy3ry7_di" bpmnElement="Task_NotifyEmployee">
+        <dc:Bounds x="1330" y="300" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_141oapn_di" bpmnElement="EndEvent_AnnualLeaveProcessed">
+        <dc:Bounds x="1502" y="322" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1487" y="365" width="67" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0kanukk_di" bpmnElement="Task_LogRequest">
+        <dc:Bounds x="1080" y="430" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_134uhgg_di" bpmnElement="Activity_1mdk4lk">
+        <dc:Bounds x="720" y="580" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_AnnualLeaveRequested">
+        <dc:Bounds x="332" y="152" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="317" y="116" width="67" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1wxcq40_di" bpmnElement="Flow_AdditionalInformation-ReviewRequest">
+        <di:waypoint x="635" y="200" />
+        <di:waypoint x="635" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1gmzetc_di" bpmnElement="Flow_Decision-InformationRequired">
+        <di:waypoint x="995" y="315" />
+        <di:waypoint x="995" y="160" />
+        <di:waypoint x="685" y="160" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1007" y="196" width="56" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1512j8e_di" bpmnElement="Flow_Rejected">
+        <di:waypoint x="1020" y="340" />
+        <di:waypoint x="1225" y="340" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1038" y="323" width="44" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0yo8jlg_di" bpmnElement="Flow_ReviewRequest-Decision">
+        <di:waypoint x="685" y="340" />
+        <di:waypoint x="745" y="340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0zbfxhq_di" bpmnElement="Flow_Start-RequestAnnualLeave">
+        <di:waypoint x="350" y="188" />
+        <di:waypoint x="350" y="340" />
+        <di:waypoint x="585" y="340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1gn0pra_di" bpmnElement="Flow_NotifyEmployee-EndEvent">
+        <di:waypoint x="1430" y="340" />
+        <di:waypoint x="1502" y="340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0nr48ws_di" bpmnElement="Flow_LogRequest-Merge">
+        <di:waypoint x="1180" y="470" />
+        <di:waypoint x="1250" y="470" />
+        <di:waypoint x="1250" y="365" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0fwkg1t_di" bpmnElement="Flow_Approved">
+        <di:waypoint x="995" y="365" />
+        <di:waypoint x="995" y="470" />
+        <di:waypoint x="1080" y="470" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1006" y="393" width="47" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0vcvasv_di" bpmnElement="Flow_Merge-NotifyEmployee">
+        <di:waypoint x="1275" y="340" />
+        <di:waypoint x="1330" y="340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1iaio24_di" bpmnElement="Flow_1iaio24">
+        <di:waypoint x="795" y="340" />
+        <di:waypoint x="970" y="340" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="823" y="323" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13bo45a_di" bpmnElement="Flow_13bo45a">
+        <di:waypoint x="770" y="365" />
+        <di:waypoint x="770" y="580" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="777" y="470" width="17" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0vuonha_di" bpmnElement="Flow_0vuonha">
+        <di:waypoint x="820" y="620" />
+        <di:waypoint x="900" y="620" />
+        <di:waypoint x="900" y="340" />
+        <di:waypoint x="970" y="340" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
